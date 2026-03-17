@@ -8,7 +8,6 @@
 
 #include <R.h>    
 #include <Rmath.h>    
-#include <R_ext/PrtUtil.h>
 #include <R_ext/Rdynload.h>
 
 #define RANDIN  GetRNGstate()
@@ -112,11 +111,7 @@ void C_SOM(double *data,
         in the map, and j is a counter over variables */
         i = (int)(n * UNIF); /* Select a random sample */
     
-        /*Rprintf("\ni: %d\n",i+1);
-        for (j = 0; j < px; j++) {
-            Rprintf(" j%d: %f",j,data[i*px + j]);
-        }*/
-    
+
         nearest = 0;
         /* calculate distances in x and y spaces, and keep track of the
         nearest code */
